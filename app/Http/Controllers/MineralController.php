@@ -25,6 +25,7 @@ class MineralController extends Controller
     {
         // Validar la solicitud
         $request->validate([
+            'nombre' => 'required|string',
             'formula' => 'required|string',
             'categoria' => 'required|string',
             'descripcion' => 'required|string',
@@ -33,6 +34,7 @@ class MineralController extends Controller
 
         // Crear un nuevo mineral con los datos proporcionados en la solicitud
         Mineral::create([
+            'nombre' => $request->nombre,
             'formula' => $request->formula,
             'categoria' => $request->categoria,
             'descripcion' => $request->descripcion,
@@ -56,6 +58,7 @@ class MineralController extends Controller
     {
         // Validar los datos del formulario de actualización
         $request->validate([
+            'nombre' => 'required|string',
             'formula' => 'required|string',
             'categoria' => 'required|string',
             'descripcion' => 'required|string',
@@ -64,6 +67,7 @@ class MineralController extends Controller
 
         // Actualizar los datos del mineral
         $mineral->update([
+            'nombre' => $request->nombre,
             'formula' => $request->formula,
             'categoria' => $request->categoria,
             'descripcion' => $request->descripcion,

@@ -12,6 +12,6 @@ class Mineral extends Model
     protected $table = 'minerales';
     protected $primaryKey = 'id';
     
-    protected $fillable = ['formula', 'categoria', 'descripcion', 'sistema'];
+    protected $fillable = ['nombre', 'formula', 'categoria', 'descripcion', 'sistema'];
 
 }

@@ -63,6 +63,7 @@
                             @method('PUT')
                             <input type="hidden" name="id" value="{{ $mineral->id }}">
                             <td>{{ $mineral->id }}</td>
+                            <td><input type="text" name="nombre" value="{{ $mineral->nombre }}"></td>
                             <td><input type="text" name="formula" value="{{ $mineral->formula }}"></td>
                             <td><input type="text" name="categoria" value="{{ $mineral->categoria }}"></td>
                             <td><input type="text" name="descripcion" value="{{ $mineral->descripcion }}"></td>

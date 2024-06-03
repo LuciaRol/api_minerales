@@ -15,6 +15,7 @@ class CreateMineralesTable extends Migration
     {
         Schema::create('minerales', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
             $table->string('formula');
             $table->string('categoria');
             $table->text('descripcion');

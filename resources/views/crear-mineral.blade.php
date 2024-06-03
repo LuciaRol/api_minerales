@@ -9,6 +9,10 @@
 
         <!-- Campos del formulario -->
         <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
             <label for="formula">Fórmula:</label>
             <input type="text" id="formula" name="formula" required>
         </div>
