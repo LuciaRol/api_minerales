@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('img/logo.png') }}" alt="" class="logo">
+                        <img src="{{ asset('img/roca.png') }}" alt="" class="logo">
                     </a>
                 </div>
 
@@ -15,19 +15,13 @@
                     <x-nav-link :href="url('/')" :active="request()->is('/')" class="current text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 active:border-white">
                         {{ __('Inicio') }}
                     </x-nav-link>
-                    @auth
+                   
                     <x-nav-link :href="url('/mineral')" :active="request()->is('mineral')" class="current text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
                         {{ __('Mineral') }}
                     </x-nav-link>
-                    
+                    @auth
                     <x-nav-link :href="route('crear-mineral')" :active="request()->routeIs('crear-mineral')" class="text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
                         {{ __('Crear Mineral') }}
-                    </x-nav-link>
-                    <x-nav-link :href="url('/crear-cliente')" :active="request()->is('crear-cliente')" class="text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
-                        {{ __('Crear Cliente') }}
-                    </x-nav-link>
-                    <x-nav-link :href="url('/ver-clientes')" :active="request()->is('ver-clientes')" class="text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
-                        {{ __('Ver Clientes') }}
                     </x-nav-link>
                     @endauth
 

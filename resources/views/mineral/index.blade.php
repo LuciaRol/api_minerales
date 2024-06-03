@@ -28,6 +28,7 @@
                         <td>{{ $mineral->descripcion }}</td>
                         <td>{{ $mineral->sistema }}</td>
                         <td>{{ $mineral->fecha_registro }}</td>
+                        @auth
                         <td>
                             <form action="{{ route('mineral.destroy', $mineral->id) }}" method="POST" style="display: inline-block;">
                                 @csrf
@@ -35,13 +36,14 @@
                                 <button type="submit" class="btn btn-danger">Borrar</button>
                             </form>
                         </td>
+                        @endauth
                     </tr>
                 @endforeach
             </tbody>
         </table>
 
         <hr>
-
+        @auth
         <h2>Editar Minerales</h2>
         <table>
             <thead>
@@ -75,5 +77,6 @@
                 @endforeach
             </tbody>
         </table>
+        @endauth
     @endif
 @endsection
