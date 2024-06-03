@@ -12,24 +12,24 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="url('/')" :active="request()->is('/')" class="current text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 active:border-white">
+                    <x-nav-link :href="url('/')" :active="request()->is('/')" class="current text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 active:border-white">
                         {{ __('Inicio') }}
                     </x-nav-link>
                    
-                    <x-nav-link :href="url('/mineral')" :active="request()->is('mineral')" class="current text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
+                    <x-nav-link :href="url('/mineral')" :active="request()->is('mineral')" class="current text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
                         {{ __('Mineral') }}
                     </x-nav-link>
                     @auth
-                    <x-nav-link :href="route('crear-mineral')" :active="request()->routeIs('crear-mineral')" class="text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
+                    <x-nav-link :href="route('crear-mineral')" :active="request()->routeIs('crear-mineral')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
                         {{ __('Crear Mineral') }}
                     </x-nav-link>
                     @endauth
 
                     @guest
-                    <x-nav-link :href="url('/register')" :active="request()->is('register')" class="text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
+                    <x-nav-link :href="url('/register')" :active="request()->is('register')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
                         {{ __('Register') }}
                     </x-nav-link>
-                    <x-nav-link :href="url('/login')" :active="request()->is('login')" class="text-black hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
+                    <x-nav-link :href="url('/login')" :active="request()->is('login')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
                         {{ __('Login') }}
                     </x-nav-link>
                     @endguest

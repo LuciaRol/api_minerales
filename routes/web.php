@@ -47,6 +47,4 @@ Route::post('/guardar-mineral', [MineralController::class, 'guardarmineral'])->n
 
 
 
-
-
 require __DIR__.'/auth.php';
