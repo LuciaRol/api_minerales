@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MineralController;
@@ -47,20 +46,6 @@ Route::post('/crear-mineral', [MineralController::class, 'crearmineral'])->name(
 Route::post('/guardar-mineral', [MineralController::class, 'guardarmineral'])->name('guardar-mineral');
 
 
-
-
-Route::get('/crear-cliente', [ClienteController::class, 'create'])->name('crear-cliente');
-Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
-
-Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
-
-
-Route::get('/ver-clientes', [ClienteController::class, 'index'])->name('clientes.index');
-
-
-Route::delete('/clientes/{cliente}', [ClienteController::class, 'destroy'])->name('clientes.destroy');
-
-Route::put('/clientes/{cliente}', [ClienteController::class, 'update'])->name('clientes.update');
 
 
 
