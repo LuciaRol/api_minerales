@@ -20,8 +20,8 @@
                         {{ __('Mineral') }}
                     </x-nav-link>
                     
-                    <x-nav-link :href="route('crear-cita')" :active="request()->routeIs('crear-cita')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
-                        {{ __('Crear Cita') }}
+                    <x-nav-link :href="route('crear-mineral')" :active="request()->routeIs('crear-mineral')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
+                        {{ __('Crear Mineral') }}
                     </x-nav-link>
                     <x-nav-link :href="url('/crear-cliente')" :active="request()->is('crear-cliente')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
                         {{ __('Crear Cliente') }}

@@ -29,7 +29,7 @@
                         <td>{{ $mineral->sistema }}</td>
                         <td>{{ $mineral->fecha_registro }}</td>
                         <td>
-                            <form action="{{ route('minerales.destroy', $mineral->id) }}" method="POST" style="display: inline-block;">
+                            <form action="{{ route('mineral.destroy', $mineral->id) }}" method="POST" style="display: inline-block;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Borrar</button>
@@ -58,7 +58,7 @@
             <tbody>
                 @foreach ($minerales as $mineral)
                     <tr>
-                        <form action="{{ route('minerales.update', $mineral->id) }}" method="POST">
+                        <form action="{{ route('mineral.update', $mineral->id) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <input type="hidden" name="id" value="{{ $mineral->id }}">

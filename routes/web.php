@@ -3,7 +3,6 @@
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CitaController;
 use App\Http\Controllers\MineralController;
 
 
@@ -28,22 +27,8 @@ Route::get('/register', function () {
     return view('welcome');
 });
 
-
-Route::get('/crear-cita', function () {
-    return view('crear-cita');
-});
-
-Route::post('/crear-cita', [CitaController::class, 'crearCita'])->name('crear-cita');
-
-Route::post('/guardar-cita', [CitaController::class, 'guardarCita'])->name('guardar-cita');
-
-Route::get('/crear-cliente', [ClienteController::class, 'create'])->name('crear-cliente');
-Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
-
-Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
-
 Route::get('/mineral', function () {
-     return view('mineral');
+    return view('mineral');
 });
 
 Route::get('/mineral', [MineralController::class, 'index'])->name('mineral.index');
@@ -52,6 +37,22 @@ Route::delete('/mineral/{mineral}', [MineralController::class, 'destroy'])->name
 
 Route::put('/mineral/{mineral}', [MineralController::class, 'update'])->name('mineral.update');
 
+
+Route::get('/crear-mineral', function () {
+    return view('crear-mineral');
+});
+
+Route::post('/crear-mineral', [MineralController::class, 'crearmineral'])->name('crear-mineral');
+
+Route::post('/guardar-mineral', [MineralController::class, 'guardarmineral'])->name('guardar-mineral');
+
+
+
+
+Route::get('/crear-cliente', [ClienteController::class, 'create'])->name('crear-cliente');
+Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
+
+Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
 
 
 Route::get('/ver-clientes', [ClienteController::class, 'index'])->name('clientes.index');

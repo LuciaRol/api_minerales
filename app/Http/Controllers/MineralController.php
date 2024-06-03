@@ -21,7 +21,7 @@ class MineralController extends Controller
         return view('crear-mineral');
     }
 
-    public function store(Request $request)
+    public function guardarmineral(Request $request)
     {
         // Validar la solicitud
         $request->validate([
@@ -71,6 +71,6 @@ class MineralController extends Controller
         ]);
 
         // Redirigir a alguna página de éxito o a donde prefieras
-        return redirect()->route('minerales.index')->with('success', 'El mineral se ha actualizado correctamente.');
+        return redirect()->route('mineral.index')->with('success', 'El mineral se ha actualizado correctamente.');
     }
 }
