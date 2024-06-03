@@ -4,6 +4,8 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CitaController;
+use App\Http\Controllers\MineralController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,11 +42,16 @@ Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clie
 
 Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
 
-Route::get('/citas', function () {
-     return view('citas');
+Route::get('/mineral', function () {
+     return view('mineral');
 });
 
-Route::get('/citas', [CitaController::class, 'index'])->name('citas.index');
+Route::get('/mineral', [MineralController::class, 'index'])->name('mineral.index');
+
+Route::delete('/mineral/{mineral}', [MineralController::class, 'destroy'])->name('mineral.destroy');
+
+Route::put('/mineral/{mineral}', [MineralController::class, 'update'])->name('mineral.update');
+
 
 
 Route::get('/ver-clientes', [ClienteController::class, 'index'])->name('clientes.index');
@@ -54,9 +61,6 @@ Route::delete('/clientes/{cliente}', [ClienteController::class, 'destroy'])->nam
 
 Route::put('/clientes/{cliente}', [ClienteController::class, 'update'])->name('clientes.update');
 
-Route::delete('/citas/{cita}', [CitaController::class, 'destroy'])->name('citas.destroy');
-
-Route::put('/citas/{cita}', [CitaController::class, 'update'])->name('citas.update');
 
 
 require __DIR__.'/auth.php';

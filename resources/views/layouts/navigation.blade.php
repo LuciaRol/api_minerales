@@ -16,8 +16,8 @@
                         {{ __('Inicio') }}
                     </x-nav-link>
                     @auth
-                    <x-nav-link :href="url('/citas')" :active="request()->is('citas')" class="current text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
-                        {{ __('Citas') }}
+                    <x-nav-link :href="url('/mineral')" :active="request()->is('mineral')" class="current text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
+                        {{ __('Mineral') }}
                     </x-nav-link>
                     
                     <x-nav-link :href="route('crear-cita')" :active="request()->routeIs('crear-cita')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
