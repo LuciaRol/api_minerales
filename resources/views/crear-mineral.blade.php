@@ -3,33 +3,33 @@
 @section('title', 'Crear mineral')
 
 @section('content')
-    <h1>Crear mineral</h1>
-    <form action="{{ route('guardar-mineral') }}" method="POST">
+    <h1 class="form-title">Crear mineral</h1>
+    <form action="{{ route('guardar-mineral') }}" method="POST" class="mineral-form">
         @csrf <!-- Directiva de Blade para protección CSRF -->
 
         <!-- Campos del formulario -->
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <div class="form-group">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" required>
         </div>
-        <div>
-            <label for="formula">Fórmula:</label>
-            <input type="text" id="formula" name="formula" required>
+        <div class="form-group">
+            <label for="formula" class="form-label">Fórmula:</label>
+            <input type="text" id="formula" name="formula" class="form-input" required>
         </div>
-        <div>
-            <label for="categoria">Categoría:</label>
-            <input type="text" id="categoria" name="categoria" required>
+        <div class="form-group">
+            <label for="categoria" class="form-label">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" class="form-input" required>
         </div>
-        <div>
-            <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion" required></textarea>
+        <div class="form-group">
+            <label for="descripcion" class="form-label">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" class="form-textarea" required></textarea>
         </div>
-        <div>
-            <label for="sistema">Sistema:</label>
-            <input type="text" id="sistema" name="sistema" required>
+        <div class="form-group">
+            <label for="sistema" class="form-label">Sistema:</label>
+            <input type="text" id="sistema" name="sistema" class="form-input" required>
         </div>
 
         <!-- Botón de enviar -->
-        <button type="submit">Crear Mineral</button>
+        <button type="submit" class="btn btn-submit">Crear Mineral</button>
     </form>
 @endsection

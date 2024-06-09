@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-black dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+<nav x-data="{ open: false }" class="bg-red-900 dark:bg-red-900 border-b border-red-900 dark:border-red-900 p-2">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -6,30 +6,30 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('img/roca.png') }}" alt="" class="logo">
+                        <img src="{{ asset('img/mineral.png') }}" alt="" class="logo">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="url('/')" :active="request()->is('/')" class="current text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 active:border-white">
+                    <x-nav-link :href="url('/')" :active="request()->is('/')" class="current text-white hover:text-teal-500 border-b-2 border-transparent hover:border-teal-500 active:border-white">
                         {{ __('Inicio') }}
                     </x-nav-link>
                    
-                    <x-nav-link :href="url('/mineral')" :active="request()->is('mineral')" class="current text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
-                        {{ __('Mineral') }}
+                    <x-nav-link :href="url('/mineral')" :active="request()->is('mineral')" class="current text-white hover:text-teal-500 border-b-2 border-transparent hover:border-teal-500">
+                        {{ __('Minerales') }}
                     </x-nav-link>
                     @auth
-                    <x-nav-link :href="route('crear-mineral')" :active="request()->routeIs('crear-mineral')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
-                        {{ __('Crear Mineral') }}
+                    <x-nav-link :href="route('crear-mineral')" :active="request()->routeIs('crear-mineral')" class="text-white hover:text-teal-500 border-b-2 border-transparent hover:border-teal-500">
+                        {{ __('Crear mineral') }}
                     </x-nav-link>
                     @endauth
 
                     @guest
-                    <x-nav-link :href="url('/register')" :active="request()->is('register')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
-                        {{ __('Register') }}
+                    <x-nav-link :href="url('/register')" :active="request()->is('register')" class="text-white hover:text-teal-500 border-b-2 border-transparent hover:border-teal-500">
+                        {{ __('Registro') }}
                     </x-nav-link>
-                    <x-nav-link :href="url('/login')" :active="request()->is('login')" class="text-white hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500">
+                    <x-nav-link :href="url('/login')" :active="request()->is('login')" class="text-white hover:text-teal-500 border-b-2 border-transparent hover:border-teal-500">
                         {{ __('Login') }}
                     </x-nav-link>
                     @endguest
