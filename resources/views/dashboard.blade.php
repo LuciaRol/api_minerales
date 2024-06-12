@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('¡Bienvenid@! Ya puedes tus gestiones en la API.') }}
+            {{ __('¡Bienvenid@! Ya puedes realizar tus gestiones en la API.') }}
         </h2>
     </x-slot>
 
