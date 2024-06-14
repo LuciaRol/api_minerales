@@ -21,6 +21,8 @@ Route::middleware('auth')->group(function () {
 
 
 
+// Ruta API para un "Hello, World!"
+Route::get('/hello', [App\Http\Controllers\HelloWorldController::class, 'index']);
 
 Route::get('/register', function () {
     return view('welcome');
