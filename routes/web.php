@@ -24,6 +24,10 @@ Route::middleware('auth')->group(function () {
 // Ruta API para un "Hello, World!"
 Route::get('/hello', [App\Http\Controllers\HelloWorldController::class, 'index']);
 
+// Ruta API para un "Minerales!"
+Route::get('/apiminerales', [App\Http\Controllers\ApiMineralesController::class, 'index']);
+
+
 Route::get('/register', function () {
     return view('welcome');
 });
