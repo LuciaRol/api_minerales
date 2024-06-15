@@ -28,6 +28,12 @@ Route::get('/hello', [App\Http\Controllers\HelloWorldController::class, 'index']
 Route::get('/apiminerales', [App\Http\Controllers\ApiMineralesController::class, 'index']);
 
 
+// Ruta para crear un mineral
+Route::post('/apiminerales', [App\Http\Controllers\ApiMineralesController::class, 'store']);
+
+// Ruta para eliminar un mineral por su ID
+Route::delete('/apiminerales/{id}', [App\Http\Controllers\ApiMineralesController::class, 'destroy']);
+
 Route::get('/register', function () {
     return view('welcome');
 });
