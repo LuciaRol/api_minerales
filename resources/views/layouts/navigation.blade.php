@@ -33,6 +33,10 @@
                         {{ __('Login') }}
                     </x-nav-link>
                     @endguest
+                    <x-nav-link :href="url('/apiminerales')" :active="request()->is('apiminerales')" class="text-white hover:text-teal-500 border-b-2 border-transparent hover:border-teal-500">
+                        {{ __('API') }}
+                    </x-nav-link>
+
                 </div>
             </div>
 
